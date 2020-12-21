@@ -12,6 +12,7 @@
     "express-session": "^1.17.1",
     "init": "^0.1.2",
     "mysql2": "^2.2.5",
+    "path": "^0.12.7",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {},
