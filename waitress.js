@@ -7,7 +7,7 @@ const maids=require('./bills/maids');
 const myDolphin=require('./models/sequelCnnctn');
 const myDolphinTracker=require('connect-session-sequelize')(session.Store);
 const xprssApp=xprss();
-const CHANNEL=process.env.CHANNEL||4224;
+const CHANNEL=process.env.CHANNEL||4223;
 const monkeyBars=xprssHB.create({maids});
 
 
