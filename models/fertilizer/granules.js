@@ -1,0 +1,1 @@
+const connectivity=require('./connectivity/sequelCnnctn')
