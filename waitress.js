@@ -4,12 +4,11 @@ const session=require('express-session');
 const xprssHB=require('express-handlebars');
 // const enRout=require('./controllers');
 const maids=require('./bills/maids');
-const myDolphin=require('./models/connectivity/sequelCnnctn');
+const myDolphin=require('./data/connectivity/sequelCnnctn');
 const myDolphinTracker=require('connect-session-sequelize')(session.Store);
 const xprssApp=xprss();
 const CHANNEL=process.env.CHANNEL||4223;
 const monkeyBars=xprssHB.create({maids});
-
 
 const sess={
     secret:'cognitive dissonance',
