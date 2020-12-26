@@ -4,8 +4,6 @@ const askMaid=require('')
 
 class Blogs extends Model{}
 //blogs will belong to users
-    //a blog can only belong to 1 user
-        //1 user can have many blogs
 
 Blogs.init(
     {
