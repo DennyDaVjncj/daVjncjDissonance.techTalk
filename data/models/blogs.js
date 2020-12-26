@@ -1,7 +1,11 @@
-const {Model,DataTypes}=require('sequelize');//databae connectivity
-const connectivity=require('../connectivity/sequelCnnctn');
+const {Model,DataTypes, NOW}=require('sequelize');//databae connectivity
+const myDolphin=require('../connectivity/sequelCnnctn');
+const askMaid=require('')
 
 class Blogs extends Model{}
+//blogs will belong to users
+    //a blog can only belong to 1 user
+        //1 user can have many blogs
 
 Blogs.init(
     {
@@ -11,6 +15,29 @@ Blogs.init(
             primaryKey:true,
             autoIncrement:true,
         },
-        //more to come...
+        author:{
+            type:DataTypes.STRING,
+            allowNull:false,            
+        },
+        dateCreated:{
+            type:DataTypes.DATE,
+            allowNull:false,
+            defaultValue:DataTypes.NOW,
+        },
+        userId:{
+            type:DataTypes.INTEGER,
+            references:{
+                model:'user',
+                key:'id',
+            },
+        },
+    },
+    {
+        myDolphin,
+        timestamps:false,
+        freezeTableName:true,
+        underscored:false,
+        modelName:'blogs',
     }
-)
+);
+module.exports=Blogs;
