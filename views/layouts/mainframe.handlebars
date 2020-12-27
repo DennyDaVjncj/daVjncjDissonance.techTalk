@@ -9,8 +9,18 @@
 <body>
     <header>
         <h1>
-            <a href='mainframe.handlebars'>da Vjncj dissonance: the tech blog</a> 
+            <a href='/'>da Vjncj dissonance: the tech blog</a> 
         </h1>
+        <nav>
+            {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site-->
+            <button id='logout'>
+                logout
+            </button>
+            {{else}}
+            <a href="/login">login</a>
+            {{if}}
+            </nav>
+        </nav>
     </header>
 </body>
 </html>
