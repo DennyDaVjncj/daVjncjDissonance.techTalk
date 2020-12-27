@@ -1,5 +1,5 @@
 const myDolphin=require('../connectivity/sequelCnnctn');
-const { User }=require('../models/userModel');
+const { User }=require('../../models/userModel');
 // const postData=require('./fertilizer/postData');
 const userData=require('./userData.json');
 // const cmmntData=require('./fertilizer/cmmentData');
