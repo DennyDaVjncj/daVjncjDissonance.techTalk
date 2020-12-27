@@ -1,6 +1,6 @@
 const {Model,DataTypes, NOW}=require('sequelize');//databae connectivity
 const myDolphin=require('../connectivity/sequelCnnctn');
-const askMaid=require('')
+const askMaid=require('./node_modules')
 
 class Blogs extends Model{}
 //blogs will belong to users
@@ -13,9 +13,19 @@ Blogs.init(
             primaryKey:true,
             autoIncrement:true,
         },
+        title:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            unique:true,
+            validate:{
+                notNull:{
+                    message:'would you birth a child to not name them?'
+                }
+            },
+        },
         author:{
             type:DataTypes.STRING,
-            allowNull:false,            
+            allowNull:false,          
         },
         dateCreated:{
             type:DataTypes.DATE,
