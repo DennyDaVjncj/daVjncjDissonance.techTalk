@@ -2,7 +2,7 @@ const {Model,DataTypes}=require('sequelize');
 const encryption=require('bcrypt');
 const myDolphin=require('../connectivity/sequelCnnctn.js');
 
-//logic to incorporate within rout
+//logic to incorporate within rout dealing with model
 class User extends Model{
     checkPassword(loginPw){
         return encryption.campareSync(loginPw,this.password);
