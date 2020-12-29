@@ -3,7 +3,7 @@ const {User,Blogs}=require('../models');
 const secureScan=require('../bills/secureScan');
 
 //existing user
-compass.get('/',secureScan,async(ask,echo)=>{
+compass.get('/',async(ask,echo)=>{
     try{
         const blogData=await Blogs.findAll({
             include:[{model:User,attributes:['name']}],

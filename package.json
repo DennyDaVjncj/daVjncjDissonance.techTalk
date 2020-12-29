@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "chalk": "^4.1.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -18,8 +19,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node waitress.js",
-    "feed":"node data/fertilizer/granules"
+    "start": "node waitress.js",
+    "seed": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",

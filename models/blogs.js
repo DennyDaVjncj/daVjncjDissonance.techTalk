@@ -1,9 +1,7 @@
-const {Model,DataTypes, NOW}=require('sequelize');//databae connectivity
+const {Model,DataTypes}=require('sequelize');//databae connectivity
 const myDolphin=require('../connectivity/sequelCnnctn');
-const askMaid=require('./node_modules')
 
 class Blogs extends Model{}
-//blogs will belong to users
 
 Blogs.init(
     {
@@ -19,7 +17,7 @@ Blogs.init(
             validate:{
                 notNull:{
                     message:'would you birth a child to not name them?'
-                }
+                },
             },
         },
         author:{
