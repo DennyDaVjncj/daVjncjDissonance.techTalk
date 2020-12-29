@@ -1,6 +1,7 @@
 const myDolphin=require('../connectivity/sequelCnnctn');
-const { User }=require('../models/user');
-// const postData=require('./fertilizer/postData');
+const 
+const {User,Blogs}=require('../models/user');
+const postData=require('./fertilizer/postData');
 const userData=require('./userData.json');
 // const cmmntData=require('./fertilizer/cmmentData');
 // const artcleData=require('./fertilizer/artcleData');
@@ -12,7 +13,7 @@ const feedDatabase=async()=>{
         individualHooks:true,
         returning:true,
     });
-    for(const user of userData){
+    for(const users of userData){
         await User.create({
             ...users,
             userId:users[Math.floor(Math.random()*users.length)].id

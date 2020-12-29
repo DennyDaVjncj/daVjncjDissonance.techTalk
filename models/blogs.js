@@ -1,5 +1,5 @@
 const {Model,DataTypes}=require('sequelize');//databae connectivity
-const myDolphin=require('../connectivity/sequelCnnctn');
+const sequelize=require('../connectivity/sequelCnnctn');
 
 class Blogs extends Model{}
 
@@ -14,6 +14,7 @@ Blogs.init(
         title:{
             type:DataTypes.STRING,
             unique:true,
+            allowNull:false,
             validate:{
                 notNull:{
                     message:'would you birth a child to not name them?'
@@ -38,7 +39,7 @@ Blogs.init(
         },
     },
     {
-        myDolphin,
+        sequelize,
         timestamps:false,
         freezeTableName:true,
         underscored:false,

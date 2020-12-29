@@ -1,3 +1,4 @@
+// const {Model,DataTypes}=require('sequelize');
 const compass=require('express').Router();
 const {User,Blogs}=require('../models');
 const secureScan=require('../bills/secureScan');

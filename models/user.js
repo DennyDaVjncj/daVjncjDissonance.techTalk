@@ -1,6 +1,6 @@
 const encryption=require('bcrypt');
 const {Model,DataTypes}=require('sequelize');
-const myDolphin=require('../connectivity/sequelCnnctn');
+const sequelize=require('../connectivity/sequelCnnctn');
 
 //logic to incorporate within rout dealing with model
 class User extends Model{
@@ -49,7 +49,7 @@ User.init(
                 return updatedUserData;
             },
         },
-        myDolphin,
+        sequelize,
         timestamps:false,
         freezeTableName:true,
         underscored:false,
