@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dissonance, lost art</title>
+    <link rel="stylesheet" href='./noStylist/reset.css'>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href='/'>da Vjncj dissonance: the tech blog</a> 
+        </h1>
+        <nav>
+            {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site-->
+            <button id='logout'>
+                logout
+            </button>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
+            </nav>
+        </nav>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        hmmm...
+    </footer>
+
+    {{#if logged_in}}
+    <script src="/waitress.js">
+    {{/if}}
+    </script>
+</body>
+</html>
