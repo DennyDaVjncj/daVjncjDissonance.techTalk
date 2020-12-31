@@ -28,6 +28,6 @@ xprssApp.use(xprss.static(pathways.join(__dirname,'public')));
 xprssApp.use(enRout);
 
 //sequelize connection, rename
-myDolphin.sync({force:true}).then(()=>{
+myDolphin.sync({force:false}).then(()=>{
     xprssApp.listen(CHANNEL,()=>console.log('live connection to web on port:'+CHANNEL));
 })
