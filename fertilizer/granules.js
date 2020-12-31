@@ -1,4 +1,4 @@
-const myDolphin=require('../connectivity/sequelCnnctn');
+const sequelize=require('../connectivity/sequelCnnctn');
 const 
 {User,Blogs}=require('../models');
 const blogData=require('./blogData.json');
@@ -7,7 +7,7 @@ const userData=require('./userData.json');
 // const artcleData=require('./fertilizer/artcleData');
 
 const feedDatabase=async()=>{
-    await myDolphin.sync({force:true});
+    await sequelize.sync({force:true});
 
     const users=await User.bulkCreate(userData,{
         individualHooks:true,
