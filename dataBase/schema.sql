@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS daVjncjDissonance_userData;
-CREATE DATABASE daVjncjDissonance_userData;
+DROP DATABASE IF EXISTS daVjncjDissonance_data;
+CREATE DATABASE daVjncjDissonance_data;
