@@ -1,7 +1,7 @@
 // const {Model,DataTypes}=require('sequelize');
 const compass=require('express').Router();
 const {User,Blogs}=require('../models');
-const secureScan=require('../bills/secureScan');
+// const daVjncjScan=require('../bills/daVjncjScan');
 
 //existing user
 compass.get('/',async(ask,echo)=>{

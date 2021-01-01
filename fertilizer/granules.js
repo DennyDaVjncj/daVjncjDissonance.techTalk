@@ -2,7 +2,7 @@ const sequelize=require('../connectivity/sequelCnnctn');
 const 
 {User,Blogs}=require('../models');
 const blogData=require('./blogData.json');
-const userData=require('./userData.json');
+const userData=require('../fertilizer/userData.json');
 // const cmmntData=require('./fertilizer/cmmentData');
 // const artcleData=require('./fertilizer/artcleData');
 
