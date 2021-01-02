@@ -6,19 +6,21 @@
     <title>dissonance, lost art</title>
     <link rel="stylesheet" href='./noStylist/reset.css'>
 </head>
-<body>       
-    <nav id="styledBackground">
+<body>
+    <header>
         <h4>
             <a href='/'>da Vjncj dissonance: the tech blog</a> 
         </h4>
-        {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site-->
-        <a href="/" id='logout'>
-            logout
-        </a href="">
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}            
-    </nav>   
+        <nav id="styledBackground">
+            {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site-->
+            <a href="/" id='logout'>
+                logout
+            </a href="">
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}            
+        </nav>
+    </header>      
     <main>
         {{{body}}}
     </main>
