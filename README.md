@@ -4,7 +4,8 @@
     <!--
     -complete full connection to database/seed to database
     - create database models/tables, what do I want to save, how do I want to organize them, for reference?
-    -considering building out front end logic/code/templateEngine    
+    -considering building out front end logic/code/templateEngine
+    -for every htmlTemp a display rout is required, for every piece of info stored - it needs to be sent to database(manipulated however 4 whatever) to then be sent back for whatever the requet, to be displayed in whatever fasion for whatever reason
     -->
 
 Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
