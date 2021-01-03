@@ -1,13 +1,6 @@
 {{#each blogs as |blog|}}
 <div>
-    <div>
-        <h2>
-            {{{pocketWatch}}}
-            <a href="/blogs/{{blog.id}}">{{blog.title}}</a>
-        </h2>
-        <p>
-            <span></span>
-        </p>
-    </div>
+    <h3>{{blog.title}}</h3>
+    <div class="willConfig">Created By: {{blog.author}} on {{blog.dateCreated}}</div>
 </div>
 {{/each}}
