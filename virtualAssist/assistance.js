@@ -1,9 +1,10 @@
 module.exports={
     pocketWatch:sunsPosition=>{
         return sunsPosition.toLocaleDateString();
-    }
-
-    genEmoji:()=>{
-        const bigBang=Math. 
+    },
+    genEmoji:bipolarDisplay=>{        
+        if(bipolarDisplay){
+            return `<span for="img" aria-label="epiphany">💡</span>`;
+        }        
     }
 }//virtual assistance
