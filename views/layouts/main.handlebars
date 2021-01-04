@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dissonance, lost art</title>
     <link rel="stylesheet" href="./noStylist/reset.css">
-    <link rel="stylesheet" href="./noStylist/stylish.css">
+    <link rel="stylesheet" href="./noStylist/main.css">
     <link rel="stylesheet" href="./noStylist/hpHandlebars.css">
 </head>
 <body>
     <header>        
-        <nav class="navStyle">
-            <h4 >
-                <a href='/'>daVjncjDissonance: theTechBlog</a>
-            </h4>
-            {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site-->
-            <a href="/" id='logout'>
-                logout
-            </a>
-            <a href="/dashboard" id='dashboard'>
-                dashboard
-            </a>
+        <h4>
+            <span role="img" aria-label="gravenImage">🌎</span>
+            <a href='/'>daVjncjDissonance: theTechBlog</a>
+        </h4>
+        <nav>
+            {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site | -->            
+            <a href="/profile" id='?'>
+                profile
+            </a> | <button class="cognitiveDissonance" id="logout">logout</button>           
             {{else}}
             <a href="/login">login</a>
             {{/if}}
@@ -30,7 +28,7 @@
         {{{body}}}
     </main>
     <footer>
-        designed with daVjncjC0d3
+        all IP protected with: Savvy Logic
     </footer>
     {{#if logged_in}}
     <script src="/waitress.js">
