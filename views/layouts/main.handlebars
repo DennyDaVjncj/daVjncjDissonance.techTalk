@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dissonance, lost art</title>
-    <link rel="stylesheet" href="../../public/noStylist/reset.css">
-    <link rel="stylesheet" href="../../public/noStylist/stylish.css">
+    <link rel="stylesheet" href="./noStylist/reset.css">
+    <link rel="stylesheet" href="./noStylist/stylish.css">
+    <link rel="stylesheet" href="./noStylist/hpHandlebars.css">
 </head>
 <body>
-    <header class="navStyle">
-        <h4>
-            <a href='/'>da Vjncj dissonance: the tech blog</a> 
-        </h4>
-        <nav>
+    <header>        
+        <nav class="navStyle">
+            <h4 >
+                <a href='/'>daVjncjDissonance: theTechBlog</a>
+            </h4>
             {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site-->
             <a href="/" id='logout'>
                 logout
-            </a href="">
+            </a>
+            <a href="/dashboard" id='dashboard'>
+                dashboard
+            </a>
             {{else}}
             <a href="/login">login</a>
-            {{/if}}            
+            {{/if}}
         </nav>
     </header>      
     <main>
