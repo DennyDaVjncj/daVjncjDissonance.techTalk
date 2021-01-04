@@ -1,4 +1,4 @@
-const {Model,DataTypes}=require('sequelize');//databae connectivity
+const {Model,DataTypes, STRING}=require('sequelize');//databae connectivity
 const sequelize=require('../connectivity/sequelCnnctn');
 
 class Blogs extends Model{}
@@ -24,6 +24,9 @@ Blogs.init(
         author:{
             type:DataTypes.STRING,
             allowNull:false,          
+        },
+        content:{
+            type:DataTypes.STRING,
         },
         dateCreated:{
             type:DataTypes.DATE,
