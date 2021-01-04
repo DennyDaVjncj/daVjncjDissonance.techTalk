@@ -1,10 +1,13 @@
 module.exports={
-    pocketWatch:sunsPosition=>{
+    digitialDisplay:sunsPosition=>{
         return sunsPosition.toLocaleDateString();
     },
-    genEmoji:epiphany=>{        
+    brainActivity:epiphany=>{        
         if(epiphany){
-            return `<span for="img" aria-label="epiphany">💡</span>`;
-        }        
+            return `<span for="img" aria-label="epiphany">💾</span>`;
+        }      
+    },
+    cookTheBooks:revenue=>{
+        return parseInt(revenue).toLocaleString();
     }
 }//virtual assistance
