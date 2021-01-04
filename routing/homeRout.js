@@ -1,6 +1,6 @@
 // const {Model,DataTypes}=require('sequelize');
 const compass=require('express').Router();
-const daVjncjScan = require('../bills/daVjncjScan');
+const daVjncjScan = require('../virtualAssist/daVjncjScan');
 const {User,Blogs}=require('../models');
 // const daVjncjScan=require('../bills/daVjncjScan');
 
