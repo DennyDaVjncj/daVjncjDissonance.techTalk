@@ -1,8 +1,10 @@
 const compass=require('express').Router();
-const {Blogs}=require('../../models/blogs');
+const {Blogs,User}=require('../../models/blogs');
 const daVjncjScan=require('../../virtualAssist/daVjncjScan');
+const uiUX=require('../../views/');
+const { BelongsTo } = require('sequelize/types');
 
-compass.post('/blogs/api/:id',async(ask,echo)=>{
+compass.post('/api/blogs/:id',async(ask,echo)=>{
     try{
         const newBlog=await Blogs.create({
             ...ask.body,
@@ -14,3 +16,4 @@ compass.post('/blogs/api/:id',async(ask,echo)=>{
         echo.status(400).json(typo.message);
     }
 })
+module.exports=compass;

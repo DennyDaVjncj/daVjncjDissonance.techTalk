@@ -20,4 +20,25 @@ compass.get('/',async(ask,echo)=>{
         echo.status(500).json(sin.message);
     }
 });
+compass.get('/blogs/:id',async(ask,echo)=>{
+    try{
+        const blogData=await Blogs.findByPk(ask.params.id,{
+            include:[
+                {
+                    model:User,
+                    attributes:['name'],
+                },
+            ],
+        });
+        const blog=blogData.get({plain:true});
+
+        echo.render('blogs',{
+            ...blog,
+            logged_in:ask.session.logged_in
+        });
+    }catch(typo){
+        echo.status(500).json(typo.message);
+    }
+});
+
 module.exports=compass;
