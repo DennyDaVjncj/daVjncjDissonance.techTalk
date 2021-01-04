@@ -1,6 +1,8 @@
 {{#each blogs as |blog|}}
-<div class="surrouned">
+<div class="row mb-4 project">
+  <div class="col-md-5">
     <h3>{{blog.title}}</h3>
-    <div class="willConfig">Created By: {{blog.author}} on {{blog.dateCreated}}</div>
+    <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
+  </div>
 </div>
 {{/each}}

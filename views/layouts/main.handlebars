@@ -9,21 +9,23 @@
     <link rel="stylesheet" href="./noStylist/hpHandlebars.css">
 </head>
 <body>
-    <header>        
-        <h4>
-            <span role="img" aria-label="gravenImage">🌎</span>
-            <a href='/'>daVjncjDissonance: theTechBlog</a>
-        </h4>
-        <nav>
-            {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site | -->            
-            <a href="/profile" id='?'>
-                profile
-            </a> | <button class="cognitiveDissonance" id="logout">logout</button>           
-            {{else}}
-            <a href="/login">login</a>
-            {{/if}}
-        </nav>
-    </header>      
+    <div class="flex-column justify-space-around">
+        <header class="display-flex justify-space-between align-center p-2">        
+            <h4>
+                <span role="img" aria-label="gravenImage">🌎</span>
+                <a href='/'>daVjncjDissonance: theTechBlog</a>
+            </h4>
+            <nav>
+                {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site | -->            
+                <a href="/profile" id='?'>
+                    profile
+                </a> | <button class="cognitiveDissonance" id="logout">logout</button>           
+                {{else}}
+                <a href="/login">login</a>
+                {{/if}}
+            </nav>
+        </header>
+    </div>
     <main>
         {{{body}}}
     </main>
