@@ -40,5 +40,21 @@ compass.get('/blogs/:id',async(ask,echo)=>{
         echo.status(500).json(typo.message);
     }
 });
-
+compass.get('/dashboard',daVjncjScan,async(ask,echo)=>{
+    try{
+        const dashboardData=await User.findByPk(ask.session.userId,{
+            attributes:{exclude:['password']},include:[{model:Blogs}],
+        });
+    }catch(typo){
+        echo.status(500).json(typo.message)
+    }
+})
+compass.get('/login',(ask,echo)=>
+    {        
+        if (ask.session.logged_in) {
+          echo.redirect('/dashboard');
+          return;
+        }      
+        echo.render('login')
+    });
 module.exports=compass;
