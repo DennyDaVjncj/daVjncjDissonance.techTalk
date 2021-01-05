@@ -17,8 +17,8 @@
             </h4>
             <nav>
                 {{#if logged_in}}<!--renders profile root||login page based on whether is existing user||new to site | -->            
-                <a href="/profile" id='?'>
-                    profile
+                <a href="/dashboard" id='?'>
+                    dashboard
                 </a> | <button class="cognitiveDissonance" id="logout">logout</button>           
                 {{else}}
                 <a href="/login">login</a>
