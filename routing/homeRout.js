@@ -20,6 +20,7 @@ compass.get('/',async(ask,echo)=>{
         echo.status(500).json(sin.message);
     }
 });
+
 compass.get('/blogs/:id',async(ask,echo)=>{
     try{
         const blogData=await Blogs.findByPk(ask.params.id,{

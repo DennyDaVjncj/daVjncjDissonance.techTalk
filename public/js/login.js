@@ -19,7 +19,7 @@ const autonomousLogic=async UX=>{
       } else {
         alert(response.statusText);
       }
-    }
+    }//configuring login page routing
   };
   
   const signupFormHandler = async (event) => {
@@ -46,7 +46,7 @@ const autonomousLogic=async UX=>{
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    .addEventListener('submit', autonomousLogic);
   
   document
     .querySelector('.signup-form')
