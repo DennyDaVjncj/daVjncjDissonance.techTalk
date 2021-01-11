@@ -5,13 +5,6 @@ const autonomousLogic=async UX=>{
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    // if (email && password) {
-    //   // Send a POST request to the API endpoint
-    //   const data = await fetch('/api/users/login', {
-    //     method: 'POST',
-    //     body: JSON.stringify({ email, password }),
-    //     headers: { 'Content-Type': 'application/json' },
-    //   });
       if(email&&password){
         const fetchedData=await fetch('/api/userRouts/login',{
           method:'POST',
@@ -20,41 +13,39 @@ const autonomousLogic=async UX=>{
         });
       }
 
-      if (fetchedData.ok) {
-        // If successful, redirect the browser to the profile page
+      if(fetchedData.ok){
         document.location.replace('/dashboard');
-      } else {
-        alert(fetchedData.statusText);
-      }
-    };  
-  
-  const signupFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const name = document.querySelector('#name-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-  
-    if (name && email && password) {
-      const fetchedData = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ name, email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (fetchedData.ok) {
-        document.location.replace('/dashboard');
-      } else {
-        alert(fetchedData.statusText);
-      }
-    }
-  };
+      }else{
+        alert(fetchedData)
+      };
+
+      const signupLogic=async UX=>{
+        UX.preventDefault();
+
+        const moniker=document.querySelector('#moniker-signup').value.trim();
+        const eMail=document.querySelector('#eMail-signup').val.trim();;
+        const pw=document.querySelector('#pw-signup').val.trim();
+
+        if(moniker&&pw){
+          const fetchedData=await fetch('/api/userRouts',{
+            method:'POST',
+            body:JSON.stringify({eMail,pw}),
+            headers:{'Content-Type':'application/json'},
+          });
+          if(fetchedData.ok){
+            document.location.replace('/dashboard');
+          }else{
+            alert(fetchedData.statusText)
+          }
+        }
+      };
+      
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    .addEventListener('submit', autonomousLogic);
   
   document
     .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
-  
+    .addEventListener('submit', signupLogic);
+}
