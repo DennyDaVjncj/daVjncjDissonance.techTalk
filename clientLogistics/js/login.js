@@ -12,16 +12,21 @@ const autonomousLogic=async UX=>{
     //     body: JSON.stringify({ email, password }),
     //     headers: { 'Content-Type': 'application/json' },
     //   });
-      
+      if(email&&password){
+        const fetchedData=await fetch('/api/userRouts/login',{
+          method:'POST',
+          body:JSON.stringify({email,password}),
+          headers:{'Content-Type':'application/json'},
+        });
+      }
 
-      if (response.ok) {
+      if (fetchedData.ok) {
         // If successful, redirect the browser to the profile page
         document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        alert(fetchedData.statusText);
       }
-    }
-  };
+    };  
   
   const signupFormHandler = async (event) => {
     event.preventDefault();
@@ -31,16 +36,16 @@ const autonomousLogic=async UX=>{
     const password = document.querySelector('#password-signup').value.trim();
   
     if (name && email && password) {
-      const response = await fetch('/api/users', {
+      const fetchedData = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
-      if (response.ok) {
+      if (fetchedData.ok) {
         document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        alert(fetchedData.statusText);
       }
     }
   };
