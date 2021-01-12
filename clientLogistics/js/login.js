@@ -1,4 +1,4 @@
-const interfaceLogic=async UX=>{
+const loginLogic=async UX=>{
   UX.preventDefault();
 
     // Collect values from the login form
@@ -43,7 +43,7 @@ const interfaceLogic=async UX=>{
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', interfaceLogic);
+    .addEventListener('submit', loginLogic);
   
   document
     .querySelector('.signup-form')
