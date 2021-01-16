@@ -4,7 +4,7 @@ const daVjncjScan=require('../../virtualAssist/daVjncjScan');
 // const uiUX=require('../../views');
 // const { BelongsTo } = require('sequelize/types');
 
-compass.post('/api/blogs/:id',async(ask,echo)=>{
+compass.post('/api/blog/:id',async(ask,echo)=>{
     try{
         const newBlog=await Blogs.create({
             ...ask.body,
