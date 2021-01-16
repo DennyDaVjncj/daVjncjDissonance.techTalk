@@ -1,8 +1,8 @@
 const compass=require('express').Router();
-const {Blogs,User}=require('../../models/blogs');
+const {Blogs,User}=require('../../models');
 const daVjncjScan=require('../../virtualAssist/daVjncjScan');
-const uiUX=require('../../views/');
-const { BelongsTo } = require('sequelize/types');
+// const uiUX=require('../../views');
+// const { BelongsTo } = require('sequelize/types');
 
 compass.post('/api/blogs/:id',async(ask,echo)=>{
     try{

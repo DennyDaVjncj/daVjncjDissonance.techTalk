@@ -29,5 +29,5 @@ xprssApp.use(enRout);
 
 //sequelize connection, rename
 sequelize.sync({force:false}).then(()=>{
-    xprssApp.listen(CHANNEL,()=>console.log('live connection to web on port:'+CHANNEL));
+    xprssApp.listen(CHANNEL,()=>console.log('live connection to web on port: '+'http://localhost: 4223'));
 })

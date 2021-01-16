@@ -2,7 +2,7 @@ const compass=require('express').Router();
 const {Blogs,User}=require('../../models');
 const daVjncjScan=require('../../virtualAssist/daVjncjScan');
 
-compass.post('/api/userRouts',async(ask,echo)=>{
+compass.post('/',async(ask,echo)=>{
     try{
         // const newUser=await User.create({
         //     ...ask.body,
