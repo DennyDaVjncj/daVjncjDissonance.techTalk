@@ -1,14 +1,14 @@
 {{#each blogs as |blog|}}
 <div class="row mb-4 project">
   <div class="col-md-5">
-    <h3>      
+    <h3 class="container">      
       <a href="/blogs/{{blog.id}}">{{blog.title}}</a>
     </h3>
-    <p>
+    <p class="container">
       <span for='img' aria-label='satelite'>📡</span>
       : Don't forget to let the masses know about this stellar content!
     </p>
-    <p>IP belonging to: {{blog.author}}</p>
+    <p class="container">IP belonging to: {{blog.author}}</p>
   </div>
   <div class="col-md-7">
     <p>{{blog.content}}</p>
