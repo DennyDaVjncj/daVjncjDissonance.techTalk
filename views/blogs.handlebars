@@ -1,12 +1,24 @@
 <div>
-    <h2>{{title}}</h2>
-    <p>{{brainActivity}}</p>
-    <p>{{{content}}}</p>
-    <p>IP of {{blog.author}} on {{ dateCreated}}</p>
+    <h2>
+        {{title}}
+    </h2>
     <p>
-        <span for='img' aria-label="satelite">
-            📡
-        </span>
-        again, don't forget to share!
+        {{{brainActivity}}}
+    </p>
+    <p>
+        {{content}}
+    </p>
+    <p>
+        the IP of: {{blog.author}} on {{digitalDisplay}}
+    </p>
+    <p>
+        <span for='img' aria-label="satelite">📡</span>
+        <span class="dollar-amount">{{cookTheBooks}}</span>
+        help us reach this many subscribers, don't forget to share
+    </p>
+    <p>
+        <button class="btn btn-primary">
+            Share this content!
+        </button>
     </p>
 </div>
