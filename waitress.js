@@ -3,12 +3,12 @@ const xprss=require('express');
 const session=require('express-session');
 const xprssHB=require('express-handlebars');
 const enRout=require('./routing');
-const maps=require('./virtualAssist/assistance');
+const ai=require('./virtualAssist/assistance');
 const sequelize=require('./connectivity/sequelCnnctn');
 const sequelizeTracker=require('connect-session-sequelize')(session.Store);
 const xprssApp=xprss();
 const CHANNEL=process.env.CHANNEL||4223;
-const monkeyBars=xprssHB.create({maps});
+const monkeyBars=xprssHB.create({ai});
 const crayons=require('chalk');
 
 const sess={
