@@ -11,7 +11,6 @@ const loginLogic=async UX=>{
           body:JSON.stringify({email,password}),
           headers:{'Content-Type':'application/json'},
         });
-      }
 
       if(fetchedData.ok){
         document.location.replace('/dashboard');
@@ -23,7 +22,7 @@ const loginLogic=async UX=>{
         UX.preventDefault();
 
         const moniker=document.querySelector('#moniker-signup').value.trim();
-        const eMail=document.querySelector('#eMail-signup').val.trim();;
+        const eMail=document.querySelector('#eMail-signup').val.trim();
         const pw=document.querySelector('#pw-signup').val.trim();
 
         if(moniker&&pw){
@@ -38,9 +37,7 @@ const loginLogic=async UX=>{
             alert(fetchedData.statusText)
           }
         }
-      };
-      
-  
+      };  
   document
     .querySelector('.login-form')
     .addEventListener('submit', loginLogic);
