@@ -1,5 +1,6 @@
 const loginLogic=async UX=>{
   UX.preventDefault();
+  console.log('tada!')
 
     // Collect values from the login form
     const email = document.querySelector('#email-login').value.trim();
@@ -11,7 +12,7 @@ const loginLogic=async UX=>{
           body:JSON.stringify({email,password}),
           headers:{'Content-Type':'application/json'},
         });
-
+      }
       if(fetchedData.ok){
         document.location.replace('/dashboard');
       }else{
@@ -22,7 +23,7 @@ const loginLogic=async UX=>{
         UX.preventDefault();
 
         const moniker=document.querySelector('#moniker-signup').value.trim();
-        const eMail=document.querySelector('#eMail-signup').val.trim();
+        const eMail=document.querySelector('#email-signup').val.trim();
         const pw=document.querySelector('#pw-signup').val.trim();
 
         if(moniker&&pw){
@@ -41,8 +42,11 @@ const loginLogic=async UX=>{
   document
     .querySelector('.login-form')
     .addEventListener('submit', loginLogic);
+    
   
   document
     .querySelector('.signup-form')
     .addEventListener('submit', signupLogic);
-}
+    }}
+
+    
