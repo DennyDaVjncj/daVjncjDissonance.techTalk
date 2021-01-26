@@ -2,6 +2,7 @@
 
 ## Your Task:
     <!--
+    - consider deployment at first connection
     -complete full connection to database/seed to database
     - create database models/tables, what do I want to save, how do I want to organize them, for reference?
     -considering building out front end logic/code/templateEngine
