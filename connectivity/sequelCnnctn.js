@@ -1,5 +1,5 @@
 const Sequelize=require('sequelize');
-require('dotenv').config();
+require('dotenv').config();//loading this via server, loads it the fastest
 let sequelize;
 
 if(process.env.JAWSDB_URL){
